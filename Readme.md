@@ -39,8 +39,8 @@ const getAdvice = () => {
 }
 ```
 
-- Personal site: [Live url](https://johnson.rw)
-- Twitter: [Live url](https://twitter.com/joh_n_son)
+- Personal site: [Johnson](https://johnson.rw)
+- Twitter: [@joh_n_son](https://twitter.com/joh_n_son)
 - Frontend Mentor - [@joshwambere](https://www.frontendmentor.io/profile/joshwambere)
 
 

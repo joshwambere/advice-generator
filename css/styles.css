@@ -50,7 +50,7 @@ body .advice-container {
   position: relative;
 }
 body .advice-container .advice-card {
-  background: hsl(217deg, 19%, 38%);
+  background: hsl(217deg, 19%, 24%);
   max-width: 500px;
   min-height: 350px;
   min-width: 400px;

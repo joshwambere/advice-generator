@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@500&display=swap');
+
+body{
+  background: hsl(218, 23%, 16%);
+  min-height: calc(100vh - .5rem);
+  margin: 0;
+  overflow: hidden!important;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  font-family: Manrope, sans-serif;
+  position: relative;
+  .spinner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    background: rgba(78, 93, 115,.8);
+    .loader {
+      height: 5rem;
+      width: 5rem;
+
+      border-radius: 50%;
+      border: 5px solid hsl(150, 100%, 66%);;
+      border-top-color: hsl(218, 23%, 16%);
+      box-sizing: border-box;
+
+      animation: loading 1s linear infinite;
+    }
+
+    @keyframes loading {
+      0% {
+        transform: rotate(0deg);
+      }
+      0% {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+
+  .advice-container{
+    width: 100%;
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    justify-self: center;
+    align-items: center;
+    align-self: center;
+    position: relative;
+
+
+    .advice-card{
+      background: hsl(217, 19%, 38%);
+      max-width: 500px;
+      min-height: 350px;
+      min-width: 400px;
+      padding: 1rem 1.5rem;
+      border-radius: .5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      .advice{
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        overflow: auto;
+        justify-content: space-evenly;
+
+        .title{
+          text-align: center;
+          text-transform: uppercase;
+          color: hsl(150, 100%, 66%);
+          font-weight: 800;
+          letter-spacing: 2px;
+        }
+        .advice-text{
+          text-align: center;
+          color: #fff;
+          font-weight: 700;
+          font-size: 1.7rem;
+          line-height: 1.5;
+          &:before{
+            content: open-quote;
+            font-size: 2.5rem;
+            font-weight: 500!important;
+          }
+          &:after{
+            content: close-quote;
+            font-size: 2.5rem;
+            font-weight: 500!important;
+          }
+
+        }
+        .divider{
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          .advice-divider{
+            background: hsl(193, 38%, 86%);
+            width: 45%;
+            height: 1px;
+          }
+          .pause-section{
+            display: flex;
+            justify-content: space-evenly;
+
+            .pause{
+              height: 20px ;
+              width: 7px;
+              border-radius: .5rem;
+              background: #fff;
+              margin: 0 .15rem;
+            }
+          }
+
+        }
+      }
+      .advice-next{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        top: 91.5%;
+        .next-advice{
+          background: hsl(150, 100%, 66%);
+          height: 55px;
+          width: 55px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-radius: 50%;
+          transition: .2s ease-in-out;
+          &:hover{
+            cursor: pointer;
+            box-shadow: 0 0 20px rgba(82, 255, 168, 0.7);
+          }
+        }
+      }
+
+    }
+
+  }
+  .attribution{
+    margin-top: auto;
+  }
+  @media only screen and (max-width:524px) {
+    padding: 0 1.5rem;
+    .advice-container{
+      overflow: hidden;
+      .advice-card{
+        padding: 1rem 1.5rem 3.5rem;
+        min-width: 280px;
+      }
+    }
+  }
+  @media only screen and (max-width:624px) and (min-width: 528px) {
+    padding: 0 3rem;
+    .advice-container{
+      overflow: hidden;
+      .advice-card{
+        padding: 1rem 1.5rem 3.5rem;
+      }
+    }
+  }
+}
